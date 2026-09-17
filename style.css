@@ -194,7 +194,8 @@ h1, h2{
 .album__back:hover{ color: var(--accent-cool); }
 
 .album__header{
-  max-width: 60ch;
+  width: fit-content;
+  max-width: 100%;
   margin-bottom: 2.8rem;
 }
 .album__header h1{
