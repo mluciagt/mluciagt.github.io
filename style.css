@@ -137,17 +137,29 @@ h1, h2{
 }
 .entry:first-of-type{ border-top: none; padding-top: 0; }
 
+.entry__frame{
+  display: block;
+  border-bottom: none;
+}
+
 .entry__frame img{
   width: 100%;
   display: block;
   border-radius: 2px;
   filter: saturate(0.92);
+  transition: filter .25s ease;
 }
+.entry__frame:hover img{ filter: saturate(1.05); }
 
 .entry__caption h2{
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+.entry__caption h2 a{
+  border-bottom: none;
+  color: var(--ink);
+}
+.entry__caption h2 a:hover{ color: var(--accent-cool); }
 
 .entry__tag{
   color: var(--accent);
@@ -159,8 +171,74 @@ h1, h2{
 
 .entry__desc{
   color: var(--ink-dim);
-  margin: 0;
+  margin: 0 0 0.9rem;
   max-width: 46ch;
+}
+
+.entry__more{
+  display: inline-block;
+  border-bottom: none;
+  font-size: 0.85rem;
+  color: var(--accent-cool);
+}
+.entry__more:hover{ color: var(--accent); }
+
+/* ---------- album pages ---------- */
+.album__back{
+  display: inline-block;
+  border-bottom: none;
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+  margin-bottom: 2.4rem;
+}
+.album__back:hover{ color: var(--accent-cool); }
+
+.album__header{
+  max-width: 60ch;
+  margin-bottom: 2.8rem;
+}
+.album__header h1{
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.album__tag{
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-style: italic;
+}
+.album__desc{
+  color: var(--ink-dim);
+  margin: 0;
+}
+
+.album__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.album__photo{
+  margin: 0;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.album__photo img{
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.92);
+}
+.album__photo figcaption{
+  padding: 0.5rem 0.1rem 0;
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 860px){
+  .album__grid{ grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)); }
 }
 
 .about, .contact{
