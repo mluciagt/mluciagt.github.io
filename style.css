@@ -227,7 +227,7 @@ h1, h2{
 .album__photo img{
   width: 100%;
   display: block;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   filter: saturate(0.92);
 }
