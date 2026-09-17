@@ -122,7 +122,7 @@ h1, h2{
 
 .entries__intro{
   color: var(--ink-dim);
-  max-width: 52ch;
+  max-width: 70ch;
   margin: 0 0 3.4rem;
   font-style: italic;
 }
