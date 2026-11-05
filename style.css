@@ -145,10 +145,13 @@ h1, h2{
 .entry__frame img{
   width: 100%;
   display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   border-radius: 2px;
   filter: saturate(0.92);
   transition: filter .25s ease;
 }
+
 .entry__frame:hover img{ filter: saturate(1.05); }
 
 .entry__caption h2{
