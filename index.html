@@ -1,101 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>Lucia Gonzalez | Photography</title>
+<meta name="description" content="Photography by Lucia Gonzalez: biology, expeditions and the places in between.">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lucia Torres — Field Notes</title>
-<meta name="description" content="Photography and field work — biology, expeditions, and the places in between.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="layout">
+<header class="top">
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="top__name" href="index.html">Lucia Gonzalez</a>
+  <a class="top__social" href="https://www.instagram.com/photobymlgt" target="_blank" rel="noopener noreferrer">Instagram</a>
+</header>
 
-  <!-- Left index column -->
-  <aside class="index">
-    <div class="index__top">
-      <h1 class="index__name">Lucia<br>Torres</h1>
-      <p class="index__role">Biologist &amp; photographer<br>Sherbrooke, Canada</p>
-    </div>
+<nav class="menu" id="menu" aria-label="Primary">
+  <a href="index.html" aria-current="page">Home</a>
+  <a href="work.html">Work</a>
+  <span><a href="about.html">About</a> <i>|</i> <a href="about.html#contact">Contact</a></span>
+</nav>
 
-    <nav class="index__nav" aria-label="Primary">
-      <a href="#work">Field notes</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<main class="home">
+  <img class="home__image" src="images/ANT1-34.jpg" alt="Photograph from the Antarctic Peninsula by Lucia Gonzalez">
+</main>
 
-    <div class="index__meta">
-      <p class="index__coords">45.4° N -71.8° W — currently a MSc student at Université de Sherbrooke<br> </p>
-      <ul class="index__links">
-        <li><a href="https://x.com/MLGonzalezT">X / Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/maria-lucia-gonzalez-torres/">LinkedIn</a></li>
-        <li><a href="https://www.instagram.com/photobymlgt">Instagram</a></li>
-      </ul>
-    </div>
-  </aside>
-
-  <!-- Right scrolling content -->
-  <main class="content">
-
-    <section id="work" class="entries" aria-label="Selected work">
-      <p class="entries__intro">A running catalog of expeditions and stories capture through my lens </p>
-
-      <article class="entry">
-        <a class="entry__frame" href="albums/antarctica.html">
-          <img src="images/ANT1_Moss-1.jpg" alt="Cierva Cove, Antarctic Peninsula">
-        </a>
-        <div class="entry__caption">
-          <h2><a href="albums/antarctica.html">Antarctic Peninsula, South Georgia &amp; Falkland Islands</a></h2>
-          <p class="entry__tag">National Geographic x Lindblad Expeditions — 2026</p>
-          <p class="entry__desc"> Visiting Scientist Program aboard NatGeo Endurance ship. I assisted with data collection for Dr Amy Heim’s project "Bipolar Exploration of the Bryosphere", a study examining how climate change is reshaping moss‑dominated ecosystems and the microbial communities that sustain them across the polar regions.</p>
-          <a class="entry__more" href="albums/antarctica.html">View album →</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <a class="entry__frame" href="https://afssbymlgt.myportfolio.com/" target="_blank" rel="noopener noreferrer">
-          <img src="images/afssbymlgt_elephant.jpg" alt="McGill AFSS 2023">
-        </a>
-        <div class="entry__caption">
-          <h2><a href="https://afssbymlgt.myportfolio.com/" target="_blank" rel="noopener noreferrer">McGill AFSS</a></h2>
-          <p class="entry__tag">Field study semester in East Africa — 2023</p>
-          <p class="entry__desc">"Wildlife, People and Livestock are expanding, but land isn't."<br>- Minister of wildlife and tourism of Narok county</p>
-          <a class="entry__more" href="https://afssbymlgt.myportfolio.com/" target="_blank" rel="noopener noreferrer">View album →</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <a class="entry__frame" href="albums/moss-mycobiome.html">
-          <img src="images/Pleurozium_lbm.jpg" alt="The hidden world of mosses">
-        </a>
-        <div class="entry__caption">
-          <h2><a href="albums/moss-mycobiome.html">Moss mycobiome across Quebec's forests</a></h2>
-          <p class="entry__tag">Ongoing</p>
-          <p class="entry__desc">MSc. research project at Université de Sherbrooke</p>
-          <a class="entry__more" href="albums/moss-mycobiome.html">View album →</a>
-        </div>
-      </article>
-    </section>
-
-    <section id="about" class="about">
-      <h2>About</h2>
-      <p>I'm a Biology M.Sc. student and photographer currently based in Sherbrooke, Canada. I enjoy photographing events, capturing candid moments, and documenting my travels. Through photography, I love exploring new places, meeting people, and finding stories in the everyday.</p>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>For prints, collaborations, or inquiries — <a href="mailto:mluciagt11@gmail.com">mluciagt11@gmail.com</a></p>
-    </section>
-
-    <footer class="footer">
-      <p>© <span id="year"></span> MLGT</p>
-    </footer>
-
-  </main>
-</div>
+<footer class="foot">
+  <p>© <span id="year">2026</span> Lucia Gonzalez</p>
+  <p><a href="mailto:luciaxxx@gmail.com">luciaxxx@gmail.com</a></p>
+</footer>
 
 <script src="script.js"></script>
 </body>
