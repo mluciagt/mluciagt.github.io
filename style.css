@@ -171,10 +171,10 @@ a:focus-visible, button:focus-visible{ outline: 2px solid var(--ink); outline-of
 /* ---------- story / album page ---------- */
 .story{
   display: grid;
-  grid-template-columns: minmax(0, 6fr) minmax(0, 4fr);
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
   gap: clamp(2rem, 6vw, 6rem);
   align-items: start;
-  max-width: 1040px;
+  max-width: 900px;
   margin-inline: auto;
 }
 .story img{ display: block; width: 100%; height: auto; }
