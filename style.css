@@ -209,3 +209,64 @@ a:focus-visible, button:focus-visible{ outline: 2px solid var(--ink); outline-of
 @media (max-width: 800px){
   .story, .story__gallery{ grid-template-columns: 1fr; }
 }
+
+/* ---------- lightbox ---------- */
+[data-gallery] img{ cursor: zoom-in; }
+
+.lb{
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  animation: lb-in .2s ease;
+}
+.lb[hidden]{ display: none; }
+@keyframes lb-in{ from{ opacity: 0; } to{ opacity: 1; } }
+
+.lb__img{
+  display: block;
+  max-width: calc(100vw - 9rem);
+  max-height: calc(100vh - 7rem);
+  max-height: calc(100svh - 7rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lb__btn{
+  position: absolute;
+  padding: 0.75rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+}
+.lb__btn svg{
+  display: block;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linecap: butt;
+}
+.lb__btn[hidden]{ display: none; }
+.lb__close{ top: 1.25rem; right: 1.5rem; }
+.lb__close svg{ width: 2.2rem; height: 2.2rem; }
+.lb__prev, .lb__next{ top: 50%; transform: translateY(-50%); }
+.lb__prev{ left: 0.75rem; }
+.lb__next{ right: 0.75rem; }
+.lb__prev svg, .lb__next svg{ width: 1.6rem; height: 3.2rem; }
+.lb__btn:hover{ opacity: .6; }
+
+@media (max-width: 600px){
+  .lb__img{ max-width: 100vw; max-height: calc(100svh - 9rem); }
+  .lb__prev, .lb__next{ top: auto; bottom: 1rem; transform: none; }
+  .lb__prev{ left: 1.5rem; }
+  .lb__next{ right: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .lb{ animation: none; }
+}
