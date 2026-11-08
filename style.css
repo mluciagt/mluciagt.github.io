@@ -152,7 +152,7 @@ a:focus-visible, button:focus-visible{ outline: 2px solid var(--ink); outline-of
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: var(--pad);
+  padding: .75rem var(--pad) var(--pad);
   font-size: .8rem;
   color: var(--ink-dim);
 }
