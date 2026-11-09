@@ -276,6 +276,11 @@ a:focus-visible, button:focus-visible{ outline: 2px solid var(--ink); outline-of
 }
 
 /* ---------- video link button ---------- */
+.story__video{
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .btn-video{
   display: inline-flex;
   align-items: center;
