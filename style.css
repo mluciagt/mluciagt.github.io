@@ -274,3 +274,36 @@ a:focus-visible, button:focus-visible{ outline: 2px solid var(--ink); outline-of
 @media (prefers-reduced-motion: reduce){
   .lb{ animation: none; }
 }
+
+/* ---------- video link button ---------- */
+.btn-video{
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .75rem 1.5rem;
+  border: 1px solid var(--ink);
+  background: none;
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 300;
+  font-size: .95rem;
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease;
+}
+.btn-video::before{
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: .4rem 0 .4rem .65rem;
+  border-color: transparent transparent transparent currentColor;
+}
+.btn-video:hover{
+  background: var(--ink);
+  color: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .btn-video{ transition: none; }
+}
